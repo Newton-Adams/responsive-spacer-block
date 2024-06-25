@@ -12,3 +12,20 @@
   width: 100%;
   clear: both;
 }
+.wp-block-create-block-responsive-spacer-block.is-selected {
+  background: rgba(0, 0, 0, 0.1019607843);
+}
+
+.responsive-spacer {
+  height: var(--mobile-height, var(--tablet-height, var(--desktop-height)));
+}
+@media (min-width: 782px) {
+  .responsive-spacer {
+    height: var(--tablet-height, var(--desktop-height));
+  }
+}
+@media (min-width: 1025px) {
+  .responsive-spacer {
+    height: var(--desktop-height);
+  }
+}

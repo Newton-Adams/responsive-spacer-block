@@ -91,7 +91,7 @@ function Edit({
     style: {
       height: desktopHeight
     }
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Spacer Block', 'my-responsive-spacer-block'))));
+  }));
 }
 
 /***/ }),

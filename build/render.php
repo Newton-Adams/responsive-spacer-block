@@ -12,26 +12,23 @@
 
 // Generate unique id for aria-controls.
 $unique_id = wp_unique_id( 'p-' );
-$desktopHeight = isset($attributes['desktopHeight']) ? $attributes['desktopHeight'] : null;
-$tabletHeight = isset($attributes['tabletHeight']) ? $attributes['tabletHeight'] : null;
-$mobileHeight = isset($attributes['mobileHeight']) ? $attributes['mobileHeight'] : null;
+$desktop_height = isset($attributes['desktopHeight']) ? $attributes['desktopHeight'] : 0;
+$tablet_height  = isset($attributes['tabletHeight']) ? $attributes['tabletHeight'] : null;
+$mobile_height  = isset($attributes['mobileHeight']) ? $attributes['mobileHeight'] : null;
 
+$inline_styles = sprintf(
+    '--desktop-height: %dpx;%s%s',
+    $desktop_height,
+    $tablet_height !== null ? " --tablet-height: {$tablet_height}px;" : '',
+    $mobile_height !== null ? " --mobile-height: {$mobile_height}px;" : ''
+);
+
+$wrapper_attributes = get_block_wrapper_attributes(
+  array(
+    'class' => 'responsive-spacer',
+    'style' => esc_attr($inline_styles),
+  )
+);
 ?>
 
-<div 
-	<?php echo get_block_wrapper_attributes(); ?> 
-	data-wp-interactive="responsive-spacer-block" 
-	<?php 
-	echo wp_interactivity_data_wp_context( 
-		array( 
-			'desktopHeight' => $desktopHeight, 
-			'tabletHeight' => $tabletHeight, 
-			'mobileHeight' => $mobileHeight, 
-			'setHeight' => '',
-		) 
-	); 
-	?>
-	data-wp-init="callbacks.logWidth" 
-	data-wp-on-window--resize="callbacks.logWidthResize" 
-	data-wp-style--height="context.setHeight" >
-</div>
+<div <?php echo $wrapper_attributes; ?>></div>

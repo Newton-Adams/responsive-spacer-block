@@ -9,4 +9,16 @@
 	display: block;
 	width: 100%;
 	clear: both;
+	&.is-selected {
+		background: #0000001a;
+	}
+}
+.responsive-spacer {
+	height: var(--mobile-height, var(--tablet-height, var(--desktop-height)));
+	@media (min-width: 782px) {
+		height: var(--tablet-height, var(--desktop-height));
+	}
+	@media (min-width: 1025px) {
+		height: var(--desktop-height);
+	}
 }

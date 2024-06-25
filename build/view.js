@@ -61,28 +61,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('responsive-spacer-block', {
-  callbacks: {
-    logWidth() {
-      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
-      if (window.innerWidth > 1024) {
-        context.setHeight = context.desktopHeight + 'px';
-      } else if (window.innerWidth > 768) {
-        context.setHeight = context.tabletHeight ? context.tabletHeight + 'px' : context.desktopHeight + 'px';
-      } else {
-        context.setHeight = context.mobileHeight ? context.mobileHeight + 'px' : context.tabletHeight ? context.tabletHeight + 'px' : context.desktopHeight + 'px';
-      }
-    },
-    logWidthResize() {
-      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
-      if (window.innerWidth > 1024) {
-        context.setHeight = context.desktopHeight + 'px';
-      } else if (window.innerWidth > 782) {
-        context.setHeight = context.tabletHeight ? context.tabletHeight + 'px' : context.desktopHeight + 'px';
-      } else {
-        context.setHeight = context.mobileHeight ? context.mobileHeight + 'px' : context.tabletHeight ? context.tabletHeight + 'px' : context.desktopHeight + 'px';
-      }
-    }
-  }
+  callbacks: {}
 });
 
 //# sourceMappingURL=view.js.map

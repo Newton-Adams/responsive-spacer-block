@@ -62,9 +62,7 @@ export default function Edit( { attributes, setAttributes } ) {
                 </PanelBody>
             </InspectorControls>
 
-            <div { ...blockProps } style={{ height: desktopHeight }}>
-                <p>{ __('Spacer Block', 'my-responsive-spacer-block') }</p>
-            </div>
+            <div { ...blockProps } style={{ height: desktopHeight }}></div>
 
         </>
     );
