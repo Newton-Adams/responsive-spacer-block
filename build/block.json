@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/responsive-spacer-block",
+  "version": "0.1.0",
+  "title": "Responsive Spacer Block",
+  "category": "design",
+  "icon": "editor-expand",
+  "description": "An spacer block with the Interactivity API",
+  "example": {},
+  "supports": {
+    "interactivity": true
+  },
+  "attributes": {
+    "desktopHeight": {
+      "type": "number",
+      "default": 100
+    },
+    "tabletHeight": {
+      "type": "number"
+    },
+    "mobileHeight": {
+      "type": "number"
+    }
+  },
+  "textdomain": "responsive-spacer-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScriptModule": "file:./view.js"
+}
